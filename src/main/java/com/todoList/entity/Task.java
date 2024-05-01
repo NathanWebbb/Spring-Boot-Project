@@ -1,4 +1,4 @@
-package com.todoList.todoList.entity;
+package com.todoList.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;

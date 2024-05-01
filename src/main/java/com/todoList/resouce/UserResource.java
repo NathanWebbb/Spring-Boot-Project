@@ -1,8 +1,8 @@
-package com.todoList.todoList.resouce;
+package com.todoList.resouce;
 
-import com.todoList.todoList.entity.Task;
-import com.todoList.todoList.entity.User;
-import com.todoList.todoList.service.UserService;
+import com.todoList.entity.Task;
+import com.todoList.entity.User;
+import com.todoList.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

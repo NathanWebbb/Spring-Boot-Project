@@ -1,9 +1,9 @@
-package com.todoList.todoList.service;
+package com.todoList.service;
 
-import com.todoList.todoList.entity.Task;
-import com.todoList.todoList.entity.User;
-import com.todoList.todoList.repository.TaskRepository;
-import com.todoList.todoList.repository.UserRepository;
+import com.todoList.entity.Task;
+import com.todoList.entity.User;
+import com.todoList.repository.TaskRepository;
+import com.todoList.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
