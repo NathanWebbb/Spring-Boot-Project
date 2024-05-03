@@ -1,0 +1,33 @@
+INSERT INTO "USER" (user_name, password, email, birth_date, role, status, created_date, last_login_date, modified_date)
+VALUES ('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO TASK (user_id, title, description, status, priority, due_date, created_at, updated_at)
+VALUES ( 1, 'test1', 'test', 'undone', '3', '2024-05-3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 1, 'test2', 'test', 'undone', '3', '2024-05-1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 2, 'test2', 'test', 'undone', '3', '2024-05-1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 2, 'test2', 'test', 'undone', '3', '2024-05-1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 3, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 3, 'test2', 'test', 'undone', '3', '2024-05-1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 4, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 4, 'test2', 'test', 'undone', '3', '2024-05-2', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 5, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 5, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 6, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 6, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 7, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 7, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 8, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 8, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 9, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 9, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 10, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       ( 10, 'test2', 'test', 'undone', '3', '2024-05-12', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
