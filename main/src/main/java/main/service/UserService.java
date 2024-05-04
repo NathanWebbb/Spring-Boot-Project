@@ -2,8 +2,10 @@ package main.service;
 
 import main.entity.Task;
 import main.entity.User;
+import main.entity.Verification;
 import main.repository.TaskRepository;
 import main.repository.UserRepository;
+import main.repository.VerificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,9 @@ public class UserService {
 
     @Autowired
     TaskRepository taskRepository;
+
+    @Autowired
+    VerificationRepository verificationRepository;
 
 
     public User saveUser(User user) {
@@ -51,13 +56,22 @@ public class UserService {
         return taskRepository.findById(taskId).get();
     }
 
-    public List<Task> getAllDueTasks(){
+    public List<Task> getAllDueTasks() {
         return taskRepository.getAllDueTasks();
     }
 
-    public Task updateTask(Task task){
+    public Task updateTask(Task task) {
         return taskRepository.save(task);
     }
 
-
+    public Verification saveVerification(String email, String code) {
+        Verification verification = new Verification();
+        verification.setCode(code);
+        verification.setEmail(email);
+        Verification haveOne = verificationRepository.findByEmail(email);
+        if (haveOne != null) {
+            verification.setVerificationId(haveOne.getVerificationId());
+        }
+        return verificationRepository.save(verification);
+    }
 }

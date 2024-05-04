@@ -1,14 +1,14 @@
 INSERT INTO "USER" (user_name, password, email, birth_date, role, status, created_date, last_login_date, modified_date)
-VALUES ('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('test', 'test', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+VALUES ('Nathan', 'password', 'nathan871203@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Vanessa', 'password', 'Vanessa@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Olivia', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Emma', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Amelia', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Sophia', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Isabella', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Ava', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Mia', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Luna', 'password', 'test@gmail.com', '1990-12-12', '1', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO TASK (user_id, title, description, status, priority, due_date, created_at, updated_at)
 VALUES ( 1, 'test1', 'test', 'undone', '3', '2024-05-3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),

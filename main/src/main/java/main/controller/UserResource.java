@@ -1,7 +1,8 @@
-package main.resouce;
+package main.controller;
 
 import main.entity.Task;
 import main.entity.User;
+import main.entity.Verification;
 import main.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -45,8 +46,12 @@ public class UserResource {
     }
 
     @GetMapping("/getAllDueTasks")
-    public List<Task> getAllDueTask(){
+    public List<Task> getAllDueTask() {
         return userService.getAllDueTasks();
     }
 
+    @GetMapping("/saveVerification")
+    public Verification saveVerification(@RequestParam(name = "email") String email, @RequestParam(name = "code") String code) {
+        return userService.saveVerification(email, code);
+    }
 }
