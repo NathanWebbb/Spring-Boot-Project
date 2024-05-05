@@ -1,5 +1,6 @@
 package main.batch.scheduler;
 
+import main.batch.cleanVerificationJob.CleanVerificationBatchConfig;
 import main.batch.overdueJob.OverdueBatchConfig;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
@@ -14,6 +15,9 @@ public class BatchScheduler{
     OverdueBatchConfig overdueBatchConfig;
 
     @Autowired
+    CleanVerificationBatchConfig cleanVerificationBatchConfig;
+
+    @Autowired
     JobLauncher jobLauncher;
 
 //    @Scheduled(cron = "0 0 0 * * ?")
@@ -21,6 +25,8 @@ public class BatchScheduler{
         jobLauncher.run(overdueBatchConfig.overdueJob(), new JobParameters());
     }
 
-
-
+//    @Scheduled(cron = "0 0 0 * * ?")
+    public void scheduleCleanVerificationJob() throws Exception {
+        jobLauncher.run(cleanVerificationBatchConfig.cleanVerificationJob(), new JobParameters());
+    }
 }

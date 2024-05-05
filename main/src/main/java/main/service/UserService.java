@@ -7,10 +7,14 @@ import main.repository.TaskRepository;
 import main.repository.UserRepository;
 import main.repository.VerificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @Service
 public class UserService {
@@ -73,5 +77,23 @@ public class UserService {
             verification.setVerificationId(haveOne.getVerificationId());
         }
         return verificationRepository.save(verification);
+    }
+
+    public String updatePassword(String email, String code, String password) {
+        boolean check = verificationRepository.findByEmail(email).getCode().equals(code);
+        if(check){
+            Verification verification = verificationRepository.findByEmail(email);
+            verificationRepository.deleteById(verification.getVerificationId());
+            User user = userRepository.findByEmail(email);
+            user.setPassword(password);
+            userRepository.save(user);
+            return "Success";
+        }else{
+            return "code is not correct";
+        }
+    }
+
+    public void deleteAllVerification(){
+        verificationRepository.deleteAll();
     }
 }

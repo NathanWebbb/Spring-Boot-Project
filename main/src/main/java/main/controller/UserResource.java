@@ -54,4 +54,9 @@ public class UserResource {
     public Verification saveVerification(@RequestParam(name = "email") String email, @RequestParam(name = "code") String code) {
         return userService.saveVerification(email, code);
     }
+
+    @PostMapping("/updatePassword")
+    public String updatePassword(@RequestParam(name = "email") String email, @RequestParam(name = "code") String code, @RequestParam(name = "password") String password) {
+        return userService.updatePassword(email, code, password);
+    }
 }

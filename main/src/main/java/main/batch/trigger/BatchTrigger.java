@@ -1,5 +1,6 @@
 package main.batch.trigger;
 
+import main.batch.cleanVerificationJob.CleanVerificationBatchConfig;
 import main.batch.overdueJob.OverdueBatchConfig;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
@@ -14,6 +15,9 @@ public class BatchTrigger {
     OverdueBatchConfig overdueBatchConfig;
 
     @Autowired
+    CleanVerificationBatchConfig cleanVerificationBatchConfig;
+
+    @Autowired
     JobLauncher jobLauncher;
 
     @GetMapping("/triggerOverdueJob")
@@ -21,5 +25,8 @@ public class BatchTrigger {
         jobLauncher.run(overdueBatchConfig.overdueJob(), new JobParameters());
     }
 
-
+    @GetMapping("/triggerCleanVerificationJob")
+    public void triggerCleanVerificationJob() throws Exception{
+        jobLauncher.run(cleanVerificationBatchConfig.cleanVerificationJob(), new JobParameters());
+    }
 }
